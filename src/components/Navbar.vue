@@ -3,58 +3,62 @@
     <div class="container-fluid">
       <a class="navbar-brand link-light" href="#">وبلاگ</a>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler bg-lightBrown m-2"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbar"
-        aria-controls="navbar"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbar">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link link-light active" aria-current="page" href="#">خانه</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-light" href="#">درباره ما</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-light" href="#">ارتباط با ما</a>
-          </li>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-lg-flex d-block justify-content-between w-100 flex-wrap">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link link-light active" aria-current="page" href="#"
+                >خانه</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="#">درباره ما</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="#">ارتباط با ما</a>
+            </li>
 
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle link-light"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              مقاله ها
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item text-center" href="#">علمی</a></li>
-              <li>
-                <a class="dropdown-item text-center" href="#">برنامه نویسی</a>
-              </li>
-              <li>
-                <a class="dropdown-item text-center" href="#">محیط زیست</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <form class="me-4">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="جستجو"
-            aria-label="Search"
-          />
-        </form>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle link-light"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                مقاله ها
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item text-center" href="#">علمی</a></li>
+                <li>
+                  <a class="dropdown-item text-center" href="#">برنامه نویسی</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-center" href="#">محیط زیست</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="me-4">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="جستجو"
+              aria-label="Search"
+            />
+          </form>
+        </div>
       </div>
     </div>
   </nav>

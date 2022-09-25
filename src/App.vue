@@ -4,12 +4,9 @@
 </template>
 
 <style>
-/*!
- * Bootstrap  v5.2.0 (https://getbootstrap.com/)
- * Copyright 2011-2022 The Bootstrap Authors
- * Copyright 2011-2022 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-/* nav a {
+
+
+ /* nav a {
   font-weight: bold;
   color: #2c3e50;
 } */
