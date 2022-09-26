@@ -1,35 +1,26 @@
 <template>
-  <div class="card mb-3 p-0 container-fluid col-10 article">
+  <div class="card mb-3 p-0 container-fluid col-10 article" dir="rtl">
     <div class="row g-0">
       <div class="col-md-6">
         <img
-          src="../../public/img/1.jpg"
-          class="img-fluid rounded-start-0"
-          width="100%"
+          :src="article.imgSrc"
+          class="img-fluid w-100 img-article"
         />
       </div>
       <div class="col-md-6">
         <div class="justify-content-between d-none d-md-flex">
           <div class="d-flex">
-            <p class="text-muted bg-keyword rounded-pill p-2 m-2">خودشناسی</p>
-            <p class="text-muted bg-keyword rounded-pill p-2 m-2">خودشناسی</p>
-            <p class="text-muted bg-keyword rounded-pill p-2 m-2">خودشناسی</p>
+            <a href="#"  v-for="(keyword, i) in article.keywords" :key="i" class="text-muted bg-keyword rounded-pill p-2 m-2 text-decoration-none "> {{keyword}} </a>
           </div>
           <p class="card-text align-self-center m-3">
-            <small class="text-muted">1400/04/14</small>
+            <small class="text-muted">{{ article.date }}</small>
           </p>
         </div>
         <div class="card-body">
-          <h5 class="card-title">زنده بودن غیر از زندگی کردن</h5>
-          <p class="card-text">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
-            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
-            زیادی در شصت و سه درصد گذشته حال و آینده،...
-          </p>
+          <h5 class="card-title"> {{article.title}} </h5>
+          <p class="card-text"> {{article.shortContent}} </p>
           <nav class="text-center h5">
-            <a class="text-decoration-none link-primary" href="./article.html"
+            <a class="text-decoration-none btn btn-primary link-light mt-3" href="./article.html"
               >ادامه مقاله</a
             >
           </nav>
@@ -40,8 +31,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ['article'],
+};
 </script>
 
 <style>
+.img-article{
+  border-radius:0 5px 5px 0;
+}
 </style>
