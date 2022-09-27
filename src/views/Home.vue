@@ -1,5 +1,4 @@
 <template>
-  <Navbar />
   <Article
     class="mt-5"
     v-for="(article, i) in articles"
@@ -11,16 +10,15 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue";
 import Article from "../components/Article.vue";
 export default {
   name: "Home",
-  components: { Navbar, Article },
+  components: { Article },
   data() {
     return {
       articles: [],
       keyword: "",
-      isKeyword: [true, true],
+      isKeyword: [true, true, true, true],
     };
   },
 

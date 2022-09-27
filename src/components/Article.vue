@@ -25,8 +25,8 @@
           <h5 class="card-title">{{ article.title }}</h5>
           <p class="card-text">{{ article.shortContent }}</p>
           <nav class="text-center h5">
-            <a class="text-decoration-none btn btn-primary mt-3" href=""
-              >ادامه مقاله</a
+            <router-link class="text-decoration-none btn btn-primary mt-3" :to="{name:'ArticleContent', params:{id:article.id} }"
+              >ادامه مقاله</router-link
             >
           </nav>
         </div>
@@ -41,7 +41,6 @@ export default {
   methods: {
     handleKeyword(e) {
       this.$emit('setKeyword', e.target.value)
-      console.log(this.isKeyword);
     },
   },
 };

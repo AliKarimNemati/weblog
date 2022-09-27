@@ -7,6 +7,13 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+  {
+    path: '/:id',
+    name: 'ArticleContent',
+    component: () => import("../views/ArticleContent.vue"),
+    /*webpackChunkName:'ArticleContent'*/
+    props: true
+  },
 ]
 
 const router = createRouter({

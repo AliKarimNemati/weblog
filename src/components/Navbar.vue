@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-primary" dir="rtl">
     <div class="container-fluid">
-      <a class="navbar-brand link-light" href="#">وبلاگ</a>
+      <router-link class="navbar-brand link-light" to="/">وبلاگ</router-link>
       <button
         class="navbar-toggler bg-lightBrown m-2"
         type="button"
@@ -17,8 +17,8 @@
         <div class="d-lg-flex d-block justify-content-between w-100 flex-wrap">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link link-light active" aria-current="page" href="#"
-                >خانه</a
+              <router-link class="nav-link link-light active" aria-current="page" to="/"
+                >خانه</router-link
               >
             </li>
             <li class="nav-item">
