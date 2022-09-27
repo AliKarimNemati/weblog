@@ -8,11 +8,17 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/:id',
+    path: '/:id(\d\g)',
     name: 'ArticleContent',
     component: () => import("../views/ArticleContent.vue"),
     /*webpackChunkName:'ArticleContent'*/
     props: true
+  },
+  {
+    path: '/:cathAll(.*)',
+    name: 'NotFound',
+    component: () => import("../views/NotFound.vue"),
+    /*webpackChunkName:'NotFound'*/
   },
 ]
 
