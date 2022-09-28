@@ -50,12 +50,13 @@
               </ul>
             </li>
           </ul>
-          <form class="me-4">
+          <form class="me-4" @submit.prevent="handleSearch">
             <input
               class="form-control me-2"
               type="search"
               placeholder="جستجو"
               aria-label="Search"
+              v-model="search"
             />
           </form>
         </div>
@@ -65,7 +66,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return{
+      search:''
+    }
+  },
+  methods: {
+    handleSearch(){
+      this.$emit('searchContent', this.search)
+    }
+  }
+};
 </script>
 
 <style>

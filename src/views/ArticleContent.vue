@@ -1,4 +1,5 @@
 <template  @setArticle="setArticle">
+<Navbar />
   <div
     class="
       d-flex
@@ -12,7 +13,7 @@
   </div>
 
   <div class="d-flex justify-content-center mt-5">
-    <img :src="imgsrc" class="rounded-4" style="height: 340px; width: 85%" />
+    <img :src="imgsrc" class="rounded-4" style="height: 350px; width: 85%" />
   </div>
 
   <div
@@ -103,9 +104,10 @@
 </template>
 
 <script>
+import Navbar from "../components/Navbar.vue";
 export default {
   props: ["id"],
-  methods: {},
+  components:{Navbar},
   data() {
     return {
       articleContent: {},

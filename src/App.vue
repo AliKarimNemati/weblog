@@ -1,20 +1,17 @@
 <template>
-  <link rel="stylesheet" href="../css/main.min.css">
-    <Navbar />
-
-  <router-view/>
+  <link rel="stylesheet" href="../css/main.min.css" />
+  <router-view />
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
 export default {
-  components: { Navbar }
-}
+  components: {  },
+  methods: {},
+};
 </script>
 <style>
-
-
- /* nav a {
+/* nav a {
   font-weight: bold;
   color: #2c3e50;
 } */
