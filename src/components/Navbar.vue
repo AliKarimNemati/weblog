@@ -50,35 +50,9 @@
               </ul>
             </li>
           </ul>
-          <form class="me-4" @submit.prevent="handleSearch">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="جستجو"
-              aria-label="Search"
-              v-model="search"
-            />
-          </form>
         </div>
       </div>
     </div>
   </nav>
 </template>
 
-<script>
-export default {
-  data(){
-    return{
-      search:''
-    }
-  },
-  methods: {
-    handleSearch(){
-      this.$emit('searchContent', this.search)
-    }
-  }
-};
-</script>
-
-<style>
-</style>
