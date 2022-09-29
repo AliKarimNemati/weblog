@@ -67,10 +67,13 @@
               </ul>
             </li> -->
           </ul>
+            <Clock />
+
         </div>
       </div>
     </div>
   </nav>
+
 
   <ContactUs
     class="modal fade"
@@ -96,14 +99,19 @@
 <script>
 import ContactUs from "../components/ContactUs.vue";
 import LoginRegister from "../components/LoginRegister.vue";
+import Clock from "../components/Clock.vue";
 export default {
-  components: { ContactUs, LoginRegister },
+  components: { ContactUs, LoginRegister, Clock },
 };
 </script>
 
 <style scoped>
 a {
   cursor: pointer;
+}
+
+.nav-link.router-link-exact-active {
+  border-bottom: 2px solid white ;
 }
 </style>
 
