@@ -36,7 +36,16 @@
               >
             </li>
 
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+              <a
+                class="btn p-2 text-light"
+                data-bs-toggle="modal"
+                data-bs-target="#login_register"
+                >ورود/ثبت نام</a
+              >
+            </li>
+
+            <!-- <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle link-light"
                 href="#"
@@ -56,7 +65,7 @@
                   <a class="dropdown-item text-center" href="#">محیط زیست</a>
                 </li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -72,12 +81,23 @@
     aria-labelledby="staticBackdropLabel"
     aria-hidden="true"
   />
+
+    <LoginRegister
+    class="modal fade"
+    id="login_register"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  />
 </template>
 
 <script>
 import ContactUs from "../components/ContactUs.vue";
+import LoginRegister from "../components/LoginRegister.vue";
 export default {
-  components: { ContactUs },
+  components: { ContactUs, LoginRegister },
 };
 </script>
 

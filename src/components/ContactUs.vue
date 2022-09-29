@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content bg-light">
         <div class="modal-header">
           <button
             type="button"
