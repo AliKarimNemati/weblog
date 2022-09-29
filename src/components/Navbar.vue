@@ -17,7 +17,10 @@
         <div class="d-lg-flex d-block justify-content-between w-100 flex-wrap">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link class="nav-link link-light active" aria-current="page" to="/"
+              <router-link
+                class="nav-link link-light active"
+                aria-current="page"
+                to="/"
                 >خانه</router-link
               >
             </li>
@@ -25,7 +28,12 @@
               <a class="nav-link link-light" href="#">درباره ما</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link-light" href="#">ارتباط با ما</a>
+              <a
+                class="nav-link link-light"
+                data-bs-toggle="modal"
+                data-bs-target="#contact"
+                >ارتباط با ما</a
+              >
             </li>
 
             <li class="nav-item dropdown">
@@ -54,5 +62,28 @@
       </div>
     </div>
   </nav>
+
+  <ContactUs
+    class="modal fade"
+    id="contact"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  />
 </template>
+
+<script>
+import ContactUs from "../components/ContactUs.vue";
+export default {
+  components: { ContactUs },
+};
+</script>
+
+<style scoped>
+a {
+  cursor: pointer;
+}
+</style>
 

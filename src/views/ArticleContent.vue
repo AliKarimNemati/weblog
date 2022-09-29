@@ -1,6 +1,5 @@
-<template  @setArticle="setArticle">
-<Navbar />
-  <div
+<template>
+<div
     class="
       d-flex
       flex-wrap
@@ -13,7 +12,7 @@
   </div>
 
   <div class="d-flex justify-content-center mt-5">
-    <img :src="imgsrc" class="rounded-4" style="height: 350px; width: 85%" />
+    <img :src="imgsrc" class="rounded-4" style="height: 350px; width: 90%" />
   </div>
 
   <div
@@ -61,7 +60,7 @@
       <p class="text-center h3 fw-bold ms-2"> نظر ثبت شده</p>
       <span class="text-primary fw-bold">افزودن نظر</span>
     </div>
-    <form action="" class="bg-light p-md-5 p-3 rounded-4 shadow-sm">
+    <form class="bg-light p-md-5 p-3 rounded-4 shadow-sm" dir="rtl">
       <div class="mb-3">
         <textarea
           class="form-control p-3 m-md-3"
@@ -95,19 +94,11 @@
     </form>
     </section>
   <!-- end comment section -->
-  <nav class="traslator bg-primary m-3 rounded-circle">
-    <a
-      href="#"
-      class="fa fa-2x fa-angle-up text-white text-decoration-none"
-    ></a>
-  </nav>
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue";
 export default {
   props: ["id"],
-  components:{Navbar},
   data() {
     return {
       articleContent: {},
