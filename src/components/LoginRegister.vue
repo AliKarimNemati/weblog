@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="modal-dialog " dir="rtl">
+    <div class="modal-dialog" dir="rtl">
       <div class="modal-content bg-light">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">ثبت نام / ورود</h5>
-            <button
+          <h5 class="modal-title" id="login-register">ثبت نام / ورود</h5>
+          <button
             type="button"
             class="btn-close m-0"
             data-bs-dismiss="modal"
@@ -44,12 +44,13 @@
           </ul>
           <div class="tab-content" id="myTabContent">
             <!-- log in -->
-            <div
+            <form
               class="tab-pane fade show active"
               id="home-tab-pane"
               role="tabpanel"
               aria-labelledby="home-tab"
               tabindex="0"
+              @submit.prevent="handleLogin"
             >
               <div class="input-group mb-3 mt-3" dir="ltr">
                 <input
@@ -60,6 +61,8 @@
                   aria-label="Username"
                   aria-describedby="username"
                   id="login-username"
+                  required
+                  v-model="lUserName"
                 />
               </div>
               <div class="input-group mb-3" dir="ltr">
@@ -71,25 +74,48 @@
                   aria-label="Password"
                   aria-describedby="password"
                   id="login-password"
+                  required
+                  v-model="lPassword"
                 />
               </div>
               <button
-                type="button"
+                type="submit"
                 class="btn btn-primary d-block ms-auto col-4"
-                id="login-btn"
               >
                 ورود
               </button>
-            </div>
+            </form>
 
             <!-- register -->
-            <div
+            <form
               class="tab-pane fade"
               id="profile-tab-pane"
               role="tabpanel"
               aria-labelledby="profile-tab"
               tabindex="0"
+              @submit.prevent="handleReg"
             >
+              <div
+                class="
+                  alert alert-warning alert-dismissible
+                  fade
+                  show
+                  bg-success
+                  mt-4
+                "
+                role="alert"
+                dir="rtl"
+                v-if="isregister"
+              >
+                <p class="m-0">ثبت نام با موفقیت انجام شد.</p>
+
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
               <div class="input-group mb-3 mt-3" dir="ltr">
                 <input
                   type="text"
@@ -99,6 +125,8 @@
                   aria-label="Email"
                   aria-describedby="email"
                   id="reg-email"
+                  v-model="rEmail"
+                  required
                 />
               </div>
               <div class="input-group mb-3 mt-3" dir="ltr">
@@ -110,6 +138,8 @@
                   aria-label="Username"
                   aria-describedby="username"
                   id="reg-username"
+                  v-model="rUserName"
+                  required
                 />
               </div>
               <div class="input-group mb-3" dir="ltr">
@@ -121,17 +151,18 @@
                   aria-label="Password"
                   aria-describedby="password"
                   id="reg-password"
+                  v-model="rPassword"
+                  required
                 />
               </div>
 
               <button
                 type="submit"
-                class="btn btn-primary  d-block ms-auto col-4"
-                id="reg-btn"
+                class="btn btn-primary d-block ms-auto col-4"
               >
                 ثبت اطلاعات
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -140,7 +171,34 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isregister: false,
+      rPassword: "",
+      rEmail: "",
+      rUserName: "",
+      lPassword: "",
+      lUserName: "",
+    };
+  },
+  methods: {
+    handleReg() {
+      this.isregister = true;
+      this.rPassword = "";
+      this.rEmail = "";
+      this.rUserName = "";
+      setInterval(() => {
+        this.isregister = false;
+      }, 3000);
+    },
+    handleLogin() {
+      this.lPassword = "";
+      this.lUserName = "";
+      this.$router.push({name: 'home'})
+    },
+  },
+};
 </script>
 
 <style>

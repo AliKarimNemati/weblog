@@ -7,6 +7,7 @@
       aria-label="Search"
       v-model="search"
       dir="rtl"
+      required
     />
   </form>
 

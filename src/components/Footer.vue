@@ -4,7 +4,7 @@
       <div class="col-md-5 col-12 m-md-5 m-2 me-auto">
         <div class="row">
           <router-link
-            class="text-decoration-none fw-bold fs-3 text-white"
+            class="text-decoration-none fw-bold fs-4 text-white"
             to="/"
             >وبلاگ</router-link
           >
@@ -26,24 +26,47 @@
         </div>
       </div>
       <div class="col-md-5 col-12 m-md-5 m-2 me-auto">
-        <h4 class="fw-bold fs-3 text-white ">ارتباط با ما</h4>
-        <form id="contact-us">
+        <h4 class="fw-bold fs-4 text-white">ارتباط با ما</h4>
+        <form id="contact-us" @submit.prevent="handleSubmit">
+          <div
+            class="
+              alert alert-warning alert-dismissible
+              fade
+              show
+              bg-success
+              mt-4
+            "
+            role="alert"
+            dir="rtl"
+            v-if="isSend"
+          >
+            <p class="m-0">ارسال با موفقیت انجام شد.</p>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label text-white"
+            <label for="email" class="form-label text-white"
               >ایمیل:
             </label>
             <input
               type="email"
               class="form-control"
-              id="exampleInputEmail1"
+              id="email"
               aria-describedby="emailHelp"
+              required
+              v-model="email"
             />
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label text-white"
+            <label class="form-label text-white"
               >پیام شما:
             </label>
-            <textarea name="" id="" class="w-100" rows="5"></textarea>
+            <textarea name="" id="" class="w-100" rows="5" required v-model="message"></textarea>
           </div>
           <div class="text-center">
             <button type="submit" class="btn btn-lightBrown col-4">
@@ -55,15 +78,31 @@
     </div>
 
     <div class="row text-center border-top border-gray p-4 m-0">
-      <p class="text-light m-0">
-        تمام حقوق برای وبسایت محفوظ است - 1401
-      </p>
+      <p class="text-light m-0">تمام حقوق برای وبسایت محفوظ است - 1401</p>
     </div>
   </footer>
 </template>
 
 <script>
-export default {};
+export default {
+    data(){
+    return{
+      isSend: false,
+      message:'',
+      email:'',
+    }
+  },
+  methods: {
+    handleSubmit() {
+      this.isSend = true;
+      this.message = '';
+      this.email = '';
+      setInterval(() => {
+        this.isSend = false
+      }, 3000);
+    },
+  },
+};
 </script>
 
 <style>

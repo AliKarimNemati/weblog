@@ -25,9 +25,6 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link link-light" href="#">درباره ما</a>
-            </li>
-            <li class="nav-item">
               <a
                 class="nav-link link-light"
                 data-bs-toggle="modal"
@@ -37,11 +34,11 @@
             </li>
 
             <li class="nav-item">
-              <a
+              <button
                 class="btn p-2 text-light"
                 data-bs-toggle="modal"
                 data-bs-target="#login_register"
-                >ورود/ثبت نام</a
+                >ورود / ثبت نام</button
               >
             </li>
 
@@ -68,7 +65,6 @@
             </li> -->
           </ul>
             <Clock />
-
         </div>
       </div>
     </div>
