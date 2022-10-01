@@ -60,7 +60,6 @@
                   placeholder="نام کاربری"
                   aria-label="Username"
                   aria-describedby="username"
-                  id="login-username"
                   required
                   v-model="lUserName"
                 />
@@ -73,7 +72,6 @@
                   placeholder="رمز عبور"
                   aria-label="Password"
                   aria-describedby="password"
-                  id="login-password"
                   required
                   v-model="lPassword"
                 />
@@ -124,7 +122,6 @@
                   placeholder="ایمیل"
                   aria-label="Email"
                   aria-describedby="email"
-                  id="reg-email"
                   v-model="rEmail"
                   required
                 />
@@ -137,7 +134,6 @@
                   placeholder="نام کاربری"
                   aria-label="Username"
                   aria-describedby="username"
-                  id="reg-username"
                   v-model="rUserName"
                   required
                 />
@@ -150,7 +146,6 @@
                   placeholder="رمز عبور"
                   aria-label="Password"
                   aria-describedby="password"
-                  id="reg-password"
                   v-model="rPassword"
                   required
                 />

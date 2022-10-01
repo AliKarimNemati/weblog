@@ -75,6 +75,7 @@
             type="text"
             class="form-control p-3 m-md-3"
             placeholder="آدرس ایمیل"
+            required
           />
         </div>
         <div class="col-md-6 col-12">
@@ -82,6 +83,7 @@
             type="text"
             class="form-control p-3 m-md-3 mt-2"
             placeholder="نام و نام خانوادگی"
+            required
           />
         </div>
       </div>
