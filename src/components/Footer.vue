@@ -1,23 +1,23 @@
 <template>
   <footer dir="rtl" class="bg-primary m-0 mt-5 pt-3">
-    <div class="row m-0">
-      <div class="col-md-5 col-12 m-md-5 m-2 me-auto">
+    <div class="row m-4">
+      <div class="col-md-4 col-12">
         <div class="row">
           <router-link
-            class="text-decoration-none fw-bold fs-4 text-white"
+            class="text-decoration-none fw-bold fs-4 text-white text-center mb-2"
             to="/"
-            >وبلاگ</router-link
+            >وبلاگ من</router-link
           >
         </div>
         <div>
-          <p class="text-white p-0">
+          <p class="text-white p-0 text-center">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
             استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
             ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
             و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
             زیادی در شصت و سه درصد گذشته حال و آینده،...
           </p>
-          <p class="text-white p-0">
+          <p class="text-white p-0 text-center">
             ارتباط با ما از طریق ایمیل:
             <a href="#" class="text-decoration-none text-white"
               >test@test.com
@@ -25,8 +25,32 @@
           </p>
         </div>
       </div>
-      <div class="col-md-5 col-12 m-md-5 m-2 me-auto">
-        <h4 class="fw-bold fs-4 text-white">ارتباط با ما</h4>
+      <div class="col-md-4 col-12 text-center">
+        <h4 class="fw-bold fs-4 text-white mb-2">دسترسی سریع</h4>
+        <nav class="list-inline d-inline-block">
+          <router-link
+            class="nav-link link-light active mt-3"
+            aria-current="page"
+            to="/"
+            >خانه</router-link
+          >
+          <a
+            class="nav-link link-light mt-3"
+            data-bs-toggle="modal"
+            data-bs-target="#contact"
+            >ارتباط با ما</a
+          >
+          <a
+            class="nav-link link-light mt-3"
+            data-bs-toggle="modal"
+            data-bs-target="#login_register"
+          >
+            ورود / ثبت نام
+          </a>
+        </nav>
+      </div>
+      <div class="col-md-4 col-12">
+        <h4 class="fw-bold fs-4 text-white text-center mb-2">ارتباط با ما</h4>
         <form id="contact-us" @submit.prevent="handleSubmit">
           <div
             class="
@@ -50,9 +74,7 @@
             ></button>
           </div>
           <div class="mb-3">
-            <label for="email" class="form-label text-white"
-              >ایمیل:
-            </label>
+            <label for="email" class="form-label text-white">ایمیل: </label>
             <input
               type="email"
               class="form-control"
@@ -63,10 +85,15 @@
             />
           </div>
           <div class="mb-3">
-            <label class="form-label text-white"
-              >پیام شما:
-            </label>
-            <textarea name="" id="" class="w-100" rows="5" required v-model="message"></textarea>
+            <label class="form-label text-white">پیام شما: </label>
+            <textarea
+              name=""
+              id=""
+              class="w-100"
+              rows="5"
+              required
+              v-model="message"
+            ></textarea>
           </div>
           <div class="text-center">
             <button type="submit" class="btn btn-lightBrown col-4">
@@ -85,25 +112,28 @@
 
 <script>
 export default {
-    data(){
-    return{
+  data() {
+    return {
       isSend: false,
-      message:'',
-      email:'',
-    }
+      message: "",
+      email: "",
+    };
   },
   methods: {
     handleSubmit() {
       this.isSend = true;
-      this.message = '';
-      this.email = '';
+      this.message = "";
+      this.email = "";
       setInterval(() => {
-        this.isSend = false
+        this.isSend = false;
       }, 3000);
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
+a {
+  cursor: pointer;
+}
 </style>
