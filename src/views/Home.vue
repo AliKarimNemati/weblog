@@ -1,12 +1,16 @@
 <template>
   <div class="d-flex flex-wrap justify-content-between col-10 me-auto mt-5">
     <div class="col-md-2 col-12">
-      <select dir="rtl" class="w-100 h-100 rounded-3 border border-2">
+      <select
+        @change="handleOption"
+        dir="rtl"
+        class="w-100 h-100 rounded-3 border border-2"
+      >
         <option value="همه">همه</option>
         <option value="پر بازدید ها">پر بازدید ها</option>
       </select>
     </div>
-      <SearchBox :articles="articles" :isKeyword="isKeyword" />
+    <SearchBox :articles="articles" :isKeyword="isKeyword" />
   </div>
 
   <Article
@@ -17,7 +21,6 @@
     :isKeyword="isKeyword"
     @setKeyword="setKeyword"
   />
-
 </template>
 
 <script>
@@ -61,6 +64,21 @@ export default {
           }
         }
       });
+    },
+    handleOption(e) {
+      if (e.target.value == "همه") {
+        for (let i = 0; i < this.isKeyword.length; i++) {
+          this.isKeyword[i] = true;
+        }
+      } else if (e.target.value == "پر بازدید ها") {
+        for (let i = 0; i < this.articles.length; i++) {
+          if (this.articles[i].isfavorit == true) {
+            this.isKeyword[i] = true;
+          } else {
+            this.isKeyword[i] = false;
+          }
+        }
+      }
     },
   },
   async mounted() {
