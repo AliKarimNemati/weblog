@@ -4,7 +4,7 @@
       <select
         @change="handleOption"
         dir="rtl"
-        class="w-100 h-100 rounded-3 border border-2"
+        class="w-100 h-100 rounded-3 border border-2 boxShadow"
       >
         <option value="همه">همه</option>
         <option value="پر بازدید ها">پر بازدید ها</option>
@@ -14,7 +14,7 @@
   </div>
 
   <Article
-    class="mt-5"
+    class="mt-5 boxShadow"
     v-for="(article, i) in articles"
     :key="i"
     :article="article"

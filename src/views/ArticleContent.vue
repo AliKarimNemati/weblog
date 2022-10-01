@@ -11,8 +11,8 @@
     <h2 class="fw-bold">{{title}}</h2>
   </div>
 
-  <div class="d-flex justify-content-center mt-5">
-    <img :src="imgsrc" class="rounded-4" style="height: 350px; width: 90%" />
+  <div class="d-flex justify-content-center mt-5 ">
+    <img :src="imgsrc" class="rounded-4 boxShadow" style="height: 350px; width: 90%" />
   </div>
 
   <div
@@ -39,7 +39,7 @@
       <a class="text-muted bg-keyword rounded-pill btn p-2 m-2" v-for="(keyword, i) in keywords" :key="i">{{keyword}}</a>
     </div>
   </div>
-  <div class="bg-white rounded-4 container mt-5 p-4 p-md-5">
+  <div class="bg-white rounded-4 container mt-5 p-4 p-md-5 boxShadow">
     <div class="text-center mb-5">
       <h2 class="fw-bold">{{ title }}</h2>
     </div>
@@ -53,7 +53,7 @@
 
   <!-- start comment section -->
   <section
-    class="container bg-white mt-5 p-md-5 p-3 rounded-4 shadow-sm"
+    class="container bg-white mt-5 p-md-5 p-3 rounded-4 shadow-sm boxShadow"
     style="box-sizing: border-box"
   >
     <div class="d-flex justify-content-center align-items-center mb-5">

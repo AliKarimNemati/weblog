@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-primary" dir="rtl">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary boxShadow" dir="rtl">
     <div class="container-fluid">
       <router-link class="navbar-brand link-light d-flex align-items-center justify-content-between" to="/">
         <p class="mb-2">وبلاگ</p>

@@ -1,6 +1,6 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="col-md-4 col-12 mt-3 mt-md-0">
-    <div class="input-group w-100 m-0">
+  <form @submit.prevent="handleSubmit" class="col-md-4 col-12 mt-3 mt-md-0 boxShadow">
+    <div class="input-group w-100 m-0 ">
       <button type="submit" class="input-group-text" id="basic-addon1"
         ><i class="bi bi-search"></i>
       </button>

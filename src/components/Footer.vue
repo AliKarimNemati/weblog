@@ -28,7 +28,7 @@
           </p>
           <p class="text-white p-0 text-center">
             ارتباط با ما از طریق ایمیل:
-            <a href="#" class="text-decoration-none text-white"
+            <a href="#" class="text-decoration-none text-white clock"
               >test@test.com
             </a>
           </p>
