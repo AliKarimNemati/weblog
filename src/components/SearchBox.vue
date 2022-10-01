@@ -1,14 +1,19 @@
 <template>
   <form @submit.prevent="handleSubmit" class="col-md-4 col-12 mt-3 mt-md-0">
-    <input
-      class="form-control w-100"
-      type="search"
-      placeholder="جستجو بر اساس کلمه کلیدی"
-      aria-label="Search"
-      v-model="search"
-      dir="rtl"
-      required
-    />
+    <div class="input-group w-100 m-0">
+      <button type="submit" class="input-group-text" id="basic-addon1"
+        ><i class="bi bi-search"></i>
+      </button>
+      <input
+        class="form-control"
+        type="search"
+        placeholder="جستجو بر اساس کلمه کلیدی"
+        aria-label="Search"
+        v-model="search"
+        dir="rtl"
+        required
+      />
+    </div>
   </form>
 
   <div
@@ -24,7 +29,7 @@
         text-center
       "
     >
-       Not Found
+      Not Found
     </h1>
   </div>
 </template>

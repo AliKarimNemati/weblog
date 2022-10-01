@@ -4,9 +4,18 @@
       <div class="col-md-4 col-12">
         <div class="row">
           <router-link
-            class="text-decoration-none fw-bold fs-4 text-white text-center mb-2"
+            class="
+              navbar-brand
+              link-light
+              d-flex
+              align-items-center
+              justify-content-center
+            "
             to="/"
-            >وبلاگ من</router-link
+          >
+            <p class="fs-4 mb-2">وبلاگ</p>
+            <i class="bi bi-book-fill fs-2 ms-3"></i>
+          </router-link>
           >
         </div>
         <div>
@@ -23,6 +32,11 @@
               >test@test.com
             </a>
           </p>
+          <div class="text-center">
+            <a href="#"><i class="bi bi-whatsapp fs-2 link-light ms-3"></i></a>
+            <a href="#"><i class="bi bi-telegram fs-2 link-light ms-3"></i></a>
+            <a href="#"><i class="bi bi-facebook fs-2 link-light ms-3"></i></a>
+          </div>
         </div>
       </div>
       <div class="col-md-4 col-12 text-center">
@@ -50,7 +64,9 @@
         </nav>
       </div>
       <div class="col-md-4 col-12">
-        <h4 class="fw-bold fs-4 text-white text-center mb-2 mt-3">ارتباط با ما</h4>
+        <h4 class="fw-bold fs-4 text-white text-center mb-2 mt-3">
+          ارتباط با ما
+        </h4>
         <form id="contact-us" @submit.prevent="handleSubmit">
           <div
             class="

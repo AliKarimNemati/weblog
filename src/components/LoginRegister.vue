@@ -63,6 +63,9 @@
                   required
                   v-model="lUserName"
                 />
+                <span class="input-group-text" id="addon-wrapping"
+                  ><i class="bi bi-person-fill"></i>
+                </span>
               </div>
               <div class="input-group mb-3" dir="ltr">
                 <input
@@ -75,6 +78,9 @@
                   required
                   v-model="lPassword"
                 />
+                <span class="input-group-text" id="addon-wrapping">
+                  <i class="bi bi-lock-fill"></i>
+                </span>
               </div>
               <button
                 type="submit"
@@ -125,6 +131,9 @@
                   v-model="rEmail"
                   required
                 />
+                <span class="input-group-text" id="addon-wrapping">
+                  <i class="bi bi-envelope-fill"></i>
+                </span>
               </div>
               <div class="input-group mb-3 mt-3" dir="ltr">
                 <input
@@ -137,6 +146,9 @@
                   v-model="rUserName"
                   required
                 />
+                <span class="input-group-text" id="addon-wrapping">
+                  <i class="bi bi-person-fill"></i>
+                </span>
               </div>
               <div class="input-group mb-3" dir="ltr">
                 <input
@@ -149,6 +161,9 @@
                   v-model="rPassword"
                   required
                 />
+                <span class="input-group-text" id="addon-wrapping">
+                  <i class="bi bi-lock-fill"></i>
+                </span>
               </div>
 
               <button
@@ -190,7 +205,7 @@ export default {
     handleLogin() {
       this.lPassword = "";
       this.lUserName = "";
-      this.$router.push({name: 'home'})
+      this.$router.push({ name: "home" });
     },
   },
 };

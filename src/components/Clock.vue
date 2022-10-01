@@ -1,5 +1,6 @@
 <template>
-  <h2 class="clock text-light m-0">{{ clock }}</h2>
+  <h2 class="clock text-light m-0">{{ clock }} <i class="bi bi-clock"></i>
+</h2>
 </template>
 
 <script>

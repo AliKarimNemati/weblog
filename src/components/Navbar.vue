@@ -1,7 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-primary" dir="rtl">
     <div class="container-fluid">
-      <router-link class="navbar-brand link-light" to="/">وبلاگ</router-link>
+      <router-link class="navbar-brand link-light d-flex align-items-center justify-content-between" to="/">
+        <p class="mb-2">وبلاگ</p>
+        <i class="bi bi-book-fill fs-2 ms-3"></i>
+      </router-link>
       <button
         class="navbar-toggler bg-lightBrown m-2"
         type="button"
@@ -38,38 +41,16 @@
                 class="btn p-2 text-light"
                 data-bs-toggle="modal"
                 data-bs-target="#login_register"
-                >ورود / ثبت نام</button
               >
+                ورود / ثبت نام
+              </button>
             </li>
-
-            <!-- <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle link-light"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                مقاله ها
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item text-center" href="#">علمی</a></li>
-                <li>
-                  <a class="dropdown-item text-center" href="#">برنامه نویسی</a>
-                </li>
-                <li>
-                  <a class="dropdown-item text-center" href="#">محیط زیست</a>
-                </li>
-              </ul>
-            </li> -->
           </ul>
-            <Clock />
+          <Clock />
         </div>
       </div>
     </div>
   </nav>
-
 
   <ContactUs
     class="modal fade"
@@ -81,7 +62,7 @@
     aria-hidden="true"
   />
 
-    <LoginRegister
+  <LoginRegister
     class="modal fade"
     id="login_register"
     data-bs-backdrop="static"
@@ -107,7 +88,7 @@ a {
 }
 
 .nav-link.router-link-exact-active {
-  border-bottom: 2px solid white ;
+  border-bottom: 2px solid white;
 }
 </style>
 
