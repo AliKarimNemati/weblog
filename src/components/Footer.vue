@@ -10,6 +10,7 @@
               d-flex
               align-items-center
               justify-content-center
+              mb-2
             "
             to="/"
           >
@@ -40,7 +41,7 @@
         </div>
       </div>
       <div class="col-md-4 col-12 text-center">
-        <h4 class="fw-bold fs-4 text-white mb-2">دسترسی سریع</h4>
+        <h4 class="fw-bold fs-4 text-white mb-2 mt-4 mt-md-0">دسترسی سریع</h4>
         <nav class="list-inline d-inline-block">
           <router-link
             class="nav-link link-light active mt-3"
@@ -64,7 +65,7 @@
         </nav>
       </div>
       <div class="col-md-4 col-12">
-        <h4 class="fw-bold fs-4 text-white text-center mb-2 mt-3">
+        <h4 class="fw-bold fs-4 text-white text-center mb-2 mt-4 mt-md-0">
           ارتباط با ما
         </h4>
         <form id="contact-us" @submit.prevent="handleSubmit">
