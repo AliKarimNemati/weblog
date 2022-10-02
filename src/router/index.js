@@ -8,7 +8,7 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/:id(\d\g)',
+    path: '/article:id',
     name: 'ArticleContent',
     component: () => import("../views/ArticleContent.vue"),
     /*webpackChunkName:'ArticleContent'*/
