@@ -34,7 +34,7 @@ export default {
     return {
       articles: [],
       keyword: "",
-      isKeyword: [true, true, true],
+      isKeyword: [],
     };
   },
 
@@ -83,6 +83,9 @@ export default {
   },
   async mounted() {
     this.articles = (await (await fetch("data/db.json")).json()).articles;
+    for (let i = 0; i < this.articles.length; i++) {
+      this.isKeyword.push(true);
+    }
   },
 };
 </script>
